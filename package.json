@@ -1,8 +1,11 @@
 {
   "name": "@Sneyder2328/custom-ai-assistant-generator",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "cli code generator built for custom ai assistant",
   "main": "./dist/src/index.js",
+  "bin": {
+    "custom-ai-assistant-cli": "dist/src/index.js"
+  },
   "scripts": {
     "start": "node dist/src/index.js gen route new",
     "build": "tsc",

@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import { program } from "commander";
 import enquirer from "enquirer";
 import { runner, Logger } from "hygen"; // Make sure to refer to Hygen's documentation for proper import

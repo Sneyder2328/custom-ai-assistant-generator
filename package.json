@@ -1,6 +1,6 @@
 {
   "name": "@Sneyder2328/custom-ai-assistant-generator",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "description": "cli code generator built for custom ai assistant",
   "main": "./dist/src/index.js",
   "bin": {
@@ -8,7 +8,8 @@
   },
   "scripts": {
     "start": "node dist/src/index.js gen route new",
-    "build": "tsc && shx cp -r _templates dist",
+    "build": "tsc && shx cp -r _templates dist && npm run remove:ts-files",
+    "remove:ts-files": "shx rm -f ./dist/_templates/*/*/*.ts",
     "dev": "ts-node-esm src/index.ts gen route new"
   },
   "publishConfig": {

@@ -8,7 +8,8 @@
   },
   "scripts": {
     "start": "node dist/src/index.js gen route new",
-    "build": "tsc && shx cp -r _templates dist && npm run remove:ts-files",
+    "build": "npm run remove:templates && tsc && shx cp -r _templates dist && npm run remove:ts-files",
+    "remove:templates": "shx rm -f -r ./dist/_templates",
     "remove:ts-files": "shx rm -f ./dist/_templates/*/*/*.ts",
     "dev": "ts-node-esm src/index.ts gen route new"
   },

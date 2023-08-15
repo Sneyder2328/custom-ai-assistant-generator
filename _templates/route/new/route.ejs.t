@@ -28,6 +28,7 @@ router.<%= methods.split(' ')[index] %>(
   validate<%= h.inflection.capitalize(method) %><%= Module %>,
   <%= method %><%= Module %>Controller
 );
+
 <% }) -%>
 
 export default router;

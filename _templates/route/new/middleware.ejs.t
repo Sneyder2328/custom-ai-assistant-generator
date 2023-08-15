@@ -8,8 +8,6 @@ const modules = h.inflection.pluralize(module)
 %>
 import { NextFunction, Request, Response } from "express";
 
-export const <%= modules %>Middleware = async (req: Request,
-res: Response,
-next: NextFunction) => {
-
+export const <%= modules %>Middleware = async (req: Request, res: Response, next: NextFunction) => {
+    
 };

@@ -1,6 +1,6 @@
 {
   "name": "@Sneyder2328/custom-ai-assistant-generator",
-  "version": "1.5.2",
+  "version": "1.5.3",
   "description": "cli code generator built for custom ai assistant",
   "main": "./dist/src/index.js",
   "bin": {

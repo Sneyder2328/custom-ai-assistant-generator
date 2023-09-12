@@ -7,7 +7,7 @@ const Module = h.inflection.capitalize(module)
 const modules = h.inflection.pluralize(module)
 %>
 import { Router } from "express";
-import { authorizeMiddleware } from "../../middlewares/authentication.middleware.js";
+import { authenticateMiddleware } from "../../middlewares/authentication.middleware.js";
 import {
   <% methodsNames.forEach((method, index)=>{ -%>
     <%= method %><%= Module %>Controller,
@@ -24,7 +24,7 @@ const router = Router();
 <% methodsNames.forEach((method, index)=>{ -%>
 router.<%= methods.split(' ')[index] %>(
   '/<%= modules %>',
-  authorizeMiddleware,
+  authenticateMiddleware(),
   validate<%= h.inflection.capitalize(method) %><%= Module %>,
   <%= method %><%= Module %>Controller
 );

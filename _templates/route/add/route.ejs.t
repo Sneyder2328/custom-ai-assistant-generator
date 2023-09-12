@@ -11,7 +11,7 @@ const modules = h.inflection.pluralize(module)
 <% methodsNames.forEach((method, index)=>{ -%>
 router.<%= methods.split(' ')[index] %>(
   '/<%= modules %>',
-  authorizeMiddleware,
+  authenticateMiddleware(),
   validate<%= h.inflection.capitalize(method) %><%= Module %>,
   <%= method %><%= Module %>Controller
 );
